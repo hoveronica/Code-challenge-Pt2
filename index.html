@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html ng-app="FoodsbyApp" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="asset/css/app.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-sanitize.js"></script>
+  <script src="asset/js/app.js"></script>
+  <title>Foodsby &#8211; Lunch delivery solved for office professionals</title>
+</head>
+
+<body>
+  <header>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="logo">
+            <a href="https://www.foodsby.com/main/">
+              <img src="https://www.foodsby.com/main/wp-content/themes/foodsby/assets/images/footer-logo.png" / style="width:150px;height:75px;"></a>
+          </div>
+        <div class="col-sm-12">
+          <h5>Delivery Schedule</h5>
+      </div></div></div>
+
+    <div class="btn-toolbar">
+      <div class="btn-group" role="group" aria-label="weekdays">
+        <button type="button" class="btn btn-outline-dark" ng-click="Mon=true; Tue=false; Wed=false; Thu=false; Fri=false">Monday</button>
+        <button type="button" class="btn btn-outline-dark" ng-click="Mon=false; Tue=true; Wed=false; Thu=false; Fri=false">Tuesday</button>
+        <button type="button" class="btn btn-outline-dark" ng-click="Mon=false; Tue=false; Wed=true; Thu=false; Fri=false">Wednesday</button>
+        <button type="button" class="btn btn-outline-dark" ng-click="Mon=false; Tue=false; Wed=false; Thu=true; Fri=false">Thursday</button>
+        <button type="button" class="btn btn-outline-dark" ng-click="Mon=false; Tue=false; Wed=false; Thu=false; Fri=true">Friday</button>
+      </div>
+    </div>
+  </header>
+
+  <section ng-show="Mon">
+    <div ng-controller="FetchCtrl">
+      <div class="container" ng-repeat="(key,val) in Monday.deliveries">
+        <div class="row">
+        <div class="col-sm-6">
+          <img src="https://www.placehold.it/300X200">
+          <p class="name">{{val.restaurantName}}</p>
+        </div>
+        <div class="col-sm-6">
+          <p><span class="order">Order By: </span>
+          <span class="time">{{val.cutoff}}</span></p>
+          <p><span class="delivery">Delivery Time: </span>
+          <span class="time">{{val.dropoff}}</span></p>
+          <button type="button" class="select">Select Restaurant</button>
+          <p class="hurry">{{val.sellingOut}}</p>
+        </div>
+      </div><hr>
+    </div></div>
+  </section>
+
+  <section ng-show="Tue">
+    <div ng-controller="FetchCtrl">
+      <div class="container" ng-repeat="(key,val) in Tuesday.deliveries">
+        <div class="row">
+        <div class="col-sm-6">
+          <img src="https://www.placehold.it/300X200">
+          <p class="name">{{val.restaurantName}}</p>
+        </div>
+        <div class="col-sm-6">
+          <p><span class="order">Order By: </span>
+          <span class="time">{{val.cutoff}}</span></p>
+          <p><span class="delivery">Delivery Time: </span>
+          <span class="time">{{val.dropoff}}</span></p>
+          <button type="button" class="select">Select Restaurant</button>
+          <p class="hurry">{{val.sellingOut}}</p>
+        </div>
+      </div><hr>
+    </div></div>
+  </section>
+
+  <section ng-show="Wed">
+    <div ng-controller="FetchCtrl">
+      <h5>{{Wednesday}}</h5>
+    </div>
+  </section>
+
+  <section ng-show="Thu">
+    <div ng-controller="FetchCtrl">
+      <div class="container" ng-repeat="(key,val) in Thursday.deliveries">
+        <div class="row">
+        <div class="col-sm-6">
+          <img src="https://www.placehold.it/300X200">
+          <p class="name">{{val.restaurantName}}</p>
+        </div>
+        <div class="col-sm-6">
+          <p><span class="order">Order By: </span>
+          <span class="time">{{val.cutoff}}</span></p>
+          <p><span class="delivery">Delivery Time: </span>
+          <span class="time">{{val.dropoff}}</span></p>
+          <button type="button" class="select">Select Restaurant</button>
+          <p class="hurry">{{val.sellingOut}}</p>
+        </div>
+      </div><hr>
+    </div></div>
+  </section>
+
+  <section ng-show="Fri">
+    <div ng-controller="FetchCtrl">
+      <div class="container" ng-repeat="(key,val) in Friday.deliveries">
+        <div class="row">
+        <div class="col-sm-6">
+          <img src="https://www.placehold.it/300X200">
+          <p class="name">{{val.restaurantName}}</p>
+        </div>
+        <div class="col-sm-6">
+          <p><span class="order">Order By: </span>
+          <span class="time">{{val.cutoff}}</span></p>
+          <p><span class="delivery">Delivery Time: </span>
+          <span class="time">{{val.dropoff}}</span></p>
+          <button type="button" class="select">Select Restaurant</button>
+          <p class="hurry" ng-bind-html="sellingOut">{{val.sellingOut}}</p>
+        </div>
+      </div><hr>
+    </div></div>
+  </section>
+
+  </div>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function(event){
+    var soldout = document.getElementsByClassName("hurry");
+    for(var i=0;i<soldout.length;i++){
+      if(soldout[i].innerText==true){
+        soldout[i].innerText="Hurry! Only 5 meals left.";
+      }
+      else {
+        soldout[i].innerText=" ";
+      }
+    }
+  });
+  </script>
+
+  </body>
+</html>

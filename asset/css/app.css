@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+body{
+  font-family: 'Quicksand', sans-serif;
+  padding: 10px 20px 0px 20px;
+  margin: 0 auto;
+}
+
+.col-sm-6{
+	margin: auto;
+}
+
+h5{
+  padding-top: 30px;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  color: #dd1c1c;
+}
+
+.btn-group{
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.btn-outline-dark{
+  border-style: ridge;
+  border: 1px solid;
+  box-shadow:  0px 3px #000000;
+}
+
+.btn-outline-dark:focus{
+  background-color: #89cff0;
+  content: "Today";
+}
+
+input{
+  display: block;
+}
+
+label{
+  display: block;
+}
+
+.sold-out{
+  font-weight: bold;
+  text-align: center;
+  margin: 100px auto;
+}
+
+.select{
+  height: 30px;
+  width: 300px;
+  border-style: ridge;
+  border: 2px solid;
+  margin-top: 20px;
+  background-color: #dd1c1c;
+  color: white;
+  border-color: #000000;
+  box-shadow: 3px 3px #000000;
+}
+
+.select:active{
+  background-color: #89cff0;
+}
+
+hr{
+  border-color: #dd1c1c;
+  background-color: #dd1c1c;
+}
+
+.hurry{
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.time{
+  border: 1px ridge #000000;
+  width: 30px;
+  display: inline;
+  padding: 5px 20px 5px 5px;
+  margin-left: 20px;
+}
+
+.name{
+  font-weight: bold;
+}
+
+.order{
+  padding-right: 34px;
+}
+
+@media(max-width:920px) {
+  img{
+    width: 200px;
+    height: 150px;
+  }
+
+  p{
+    font-size: 15px;
+  }
+}
