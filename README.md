@@ -14,4 +14,4 @@ Foodsby Code Challenge 1: Front End
 
 ## Ideas behind the implementation
 This application is written in HTML, CSS and AngularJS. I picked AngularJS because it simplifies the process in creating a single-page application, and also make code resuable with the directives in its library. 
-This is an extension of the code challenge. I used ng-repeat and ng-controller to display information of the stores. Due to time constraint, I could not finish changing display text based on soldOut and sellingOut status. 
+\nThis is an extension of the code challenge. I used ng-repeat and ng-controller to display information of the stores. Due to time constraint, I could not finish changing display text based on soldOut and sellingOut status. 
