@@ -3,7 +3,7 @@ Foodsby Code Challenge 1: Front End
 
 ## User Guide: How to interact with the application on a local machine
 **Note: user should have Node.js and npm already installed**(install Node.js and npm: (https://nodejs.org/en/download/))
-1. Download the repo(https://github.com/hoveronica/Code-Challenge/archive/master.zip) and unzip the folder onto desired destination in your local machine. 
+1. Download the repo(https://github.com/hoveronica/Code-challenge-Pt2/archive/master.zip) and unzip the folder onto desired destination in your local machine. 
 2. Open the command prompt window.
 3. Type `npm install npm-install-all -g` to install packages.
 4. Go to the directory where you extracted the folder. Final destination should be "/Code-Challenge-master/delivery-app".
